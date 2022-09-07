@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS paciente (
     user_reg VARCHAR(50),
     activo BOOLEAN,
     empresa VARCHAR(50),
-    updated_at timestamp,
-    created_at timestamp,
+    updated_at TIMESTAMPS,
+    created_at TIMESTAMPS,
 
     PRIMARY KEY (idPaciente),
     FOREIGN KEY (id_titular) REFERENCES paciente (idPaciente)

@@ -13,8 +13,8 @@ class Paciente extends Model
         "idPaciente",
         "pac_Nombre","pac_Primer_Apellido","pac_Segundo_Apellido","pac_Nombre_Completo",
         "pac_CURP","pac_f_nacimiento","pac_tipo","pac_Email","pac_Telefono","pac_Celular",
-        "pac_Estado_Civil","pac_Escolaridad","pac_Pais","pac_Estado","pac_Municipio",
-        "pac_Localidad","pac_dir_CP","pac_dir_calle","pac_dir_colonia","pac_dir_comentario",
+        "pac_Estado_Civil","pac_Escolaridad","pac_Pais","pac_Sexo","pac_Estado","pac_Municipio",
+        "pac_Localidad","pac_dir_CP","pac_dir_calle","pac_dir_colonia","pac_dir_comentarios",
         "id_titular","Parentezco",
     ];
 

@@ -39,7 +39,7 @@ class PacienteController extends Controller
         $paciente->activo = $request->activo;
         $paciente->empresa = $request->empresa;
         $paciente->updated_at = $request->updated_at;
-        $paciente->created_at = Carbon::now();
+        $paciente->created_at = Carbon::now('America/Mexico_City');
         $paciente->save();
         return $paciente;
         //return Paciente::insert($request->all());
@@ -74,7 +74,7 @@ class PacienteController extends Controller
             $paciente->user_reg = $request->user_reg;
             $paciente->activo = $request->activo;
             $paciente->empresa = $request->empresa;
-            $paciente->updated_at = $request->updated_at;
+            $paciente->updated_at = Carbon::now('America/Mexico_City');
             $paciente->created_at = $request->created_at;
 
             $paciente->save();

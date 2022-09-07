@@ -36,7 +36,6 @@ return new class extends Migration
             $table->string('pac_dir_calle')->nullable();
             $table->string('pac_dir_colonia')->nullable();
             $table->string('pac_dir_comentarios')->nullable();
-            $table->string('pac_cant_adicionales')->nullable();
             $table->integer('id_titular')->nullable()->unsigned();
             $table->string('Parentezco')->nullable();
             $table->string('user_reg')->nullable();
@@ -55,6 +54,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('paciente');
     }
 };

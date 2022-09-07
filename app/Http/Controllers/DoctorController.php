@@ -36,7 +36,7 @@ class DoctorController extends Controller
         $doctor->activo = $request->activo;
         $doctor->doc_especialidades = $request->doc_especialidades;
         $doctor->doc_especialidades = $request->doc_especialidades;
-        $doctor->created_at = Carbon::now();
+        $doctor->created_at = Carbon::now('America/Mexico_City');
         $doctor->updated_at = $request->updated_at;
         $doctor->save();
         return $doctor;
@@ -69,7 +69,7 @@ class DoctorController extends Controller
             $doctor->doc_especialidades = $request->doc_especialidades;
             $doctor->doc_especialidades = $request->doc_especialidades;
             $doctor->created_at = $request->created_at;
-            $doctor->updated_at = Carbon::now();
+            $doctor->updated_at = Carbon::now('America/Mexico_City');
             $doctor->save();
             return response()->json([
                 "message" => "Doctor updated successfully"

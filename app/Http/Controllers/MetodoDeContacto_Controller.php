@@ -17,7 +17,7 @@ class MetodoDeContacto_Controller extends Controller
         $metodo->doc_horario = $request->doc_horario;
         $metodo->idDoctor = $request->idDoctor;
         $metodo->updated_at = $request->updated_at;
-        $metodo->created_at = Carbon::now();
+        $metodo->created_at = Carbon::now('America/Mexico_City');
         $metodo->save();
     }
 
@@ -29,6 +29,8 @@ class MetodoDeContacto_Controller extends Controller
             $metodo->doc_telefono_aux = $request->doc_telefono_aux;
             $metodo->doc_horario = $request->doc_horario;
             $metodo->estatus_metodo_de_contacto = $request->estatus_metodo_de_contacto;
+            $metodo->updated_at = Carbon::now('America/Mexico_City');
+            $metodo->created_at = $request->created_at;
 
             $metodo->save();
 
