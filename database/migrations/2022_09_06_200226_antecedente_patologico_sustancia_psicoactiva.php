@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('sustancia_psicoactiva', function (Blueprint $table){
             $table->increments('idSustanciaPsicoactiva');
             $table->string('sustancia_psicoactiva_alcohol');
-            $table->string('sustancia_psicoactiva_alcohol_frecuencia');
-            $table->string('sustancia_psicoactiva_alcohol_cantidad');
+            $table->string('sustancia_psicoactiva_alcohol_frecuencia')->nullable();
+            $table->string('sustancia_psicoactiva_alcohol_cantidad')->nullable();
             $table->string('sustancia_psicoactiva_tabaco');
-            $table->string('sustancia_psicoactiva_tabaco_frecuencia');
-            $table->string('sustancia_psicoactiva_tabaco_cantidad');
+            $table->string('sustancia_psicoactiva_tabaco_frecuencia')->nullable();
+            $table->string('sustancia_psicoactiva_tabaco_cantidad')->nullable();
             $table->string('sustancia_psicoactiva_otra');
-            $table->string('sustancia_psicoactiva_otra_tipo');
-            $table->string('sustancia_psicoactiva_otra_ultimo_consumo');
-            $table->string('sustancia_psicoactiva_otra_frecuencia');
+            $table->string('sustancia_psicoactiva_otra_tipo')->nullable();
+            $table->string('sustancia_psicoactiva_otra_ultimo_consumo')->nullable();
+            $table->string('sustancia_psicoactiva_otra_frecuencia')->nullable();
             $table->integer('idAntecedentePatologico')->unsigned();
             $table->timestamps();
 

@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('alergia', function (Blueprint $table){
-            $table->increments('idAlergia');
-            $table->string('alergia_tipo');
+        Schema::create('padecimiento', function (Blueprint $table){
+            $table->increments('idPadecimiento');
+            $table->string('padecimiento');
+            $table->boolean('padecimiento_estatus');
             $table->integer('idAntecedentePatologico')->unsigned();
             $table->timestamps();
 
@@ -30,8 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-
-        Schema::drop('alergia');
-
+        Schema::dropIfExists('padecimiento');
     }
 };

@@ -15,10 +15,11 @@ return new class extends Migration
     {
         Schema::create('actividad_fisica', function (Blueprint $table){
             $table->increments('idActividadFisica');
-            $table->string('frecuencia');
-            $table->string('nombreActividad');
+            $table->string('actividad_frecuencia');
+            $table->string('actividad_nombre');
             $table->boolean('estatusActividadFisica');
             $table->integer('idAntecedenteNoPatologico')->unsigned();
+            $table->timestamps();
 
             $table->foreign('idAntecedenteNoPatologico')->references('idAntecedenteNoPatologico')->on('antecedente_no_patologico');
         });

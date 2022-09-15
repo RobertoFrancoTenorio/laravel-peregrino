@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('antecente_prostatico', function (Blueprint $table){
             $table->increments('idAntecedenteProstatico');
-            $table->boolean('ExamenProstata');
+            $table->string('ExamenProstata');
             $table->integer('idHistoriaClinica')->unsigned();
             $table->timestamps();
             $table->foreign('idHistoriaClinica')->references('idHistoriaClinica')->on('historia_clinica');

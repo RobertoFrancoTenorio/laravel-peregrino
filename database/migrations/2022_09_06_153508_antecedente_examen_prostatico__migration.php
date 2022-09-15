@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('antecente_examen_prostatico', function (Blueprint $table){
+        Schema::create('examen_prostatico', function (Blueprint $table){
             $table->increments('idAntecedenteExamenProstatico');
             $table->date('fecha_ultimo_Examen_Prostatico');
             $table->text('observaciones_ultimo_examen_prostatico');
-            $table->integer('id_antecedente_prostatico')->unsigned();
+            $table->integer('idAntecedenteProstatico')->unsigned();
             $table->timestamps();
 
-            $table->foreign('id_antecedente_prostatico')->references('idAntecedenteProstatico')->on('antecente_prostatico');
+            $table->foreign('idAntecedenteProstatico')->references('idAntecedenteProstatico')->on('antecente_prostatico');
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('antecente_examen_prostatico');
+        Schema::dropIfExists('examen_prostatico');
     }
 };

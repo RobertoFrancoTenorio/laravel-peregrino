@@ -15,16 +15,20 @@ return new class extends Migration
     {
         Schema::create('antecedente_no_patologico', function (Blueprint $table){
             $table->increments('idAntecedenteNoPatologico');
-            $table->boolean('mascota');
-            $table->integer('NumeroHabitaciones');
-            $table->integer('NumeroHabitantes');
-            $table->boolean('ConsumoDeAlimentosCapeados');
-            $table->string('GruposAlimenticios');
-            $table->integer('CantidadDeComidasAlDia');
-            $table->boolean('ConsumoDePan');
+            $table->string('pac_mascota');
+            $table->string('pac_mascota_tipo')->nullable();
+            $table->integer('pac_NumeroHabitaciones');
+            $table->integer('pac_NumeroHabitantes');
+            $table->string('pac_ConsumoDeAlimentosCapeados');
+            $table->string('pac_GruposAlimenticios');
+            $table->integer('pac_CantidadDeComidasAlDia');
+            $table->string('pac_ConsumoDePan');
+            $table->string('pac_ConsumoDeSal');
+            $table->string('pac_ConsumoDeRefresco');
+            $table->text('observaciones')->nullable();
             $table->integer('idHistoriaClinica')->unsigned();
 
-            $table->timestamps('');
+            $table->timestamps();
             $table->foreign('idHistoriaClinica')->references('idHistoriaClinica')->on('historia_clinica');
         });
     }

@@ -17,7 +17,6 @@ return new class extends Migration
             $table->increments('idTransfusion');
             $table->string('transfusion_causa');
             $table->string('transfusion_fecha');
-            $table->string('transfusion_secuela');
             $table->integer('idAntecedentePatologico')->unsigned();
             $table->timestamps();
 

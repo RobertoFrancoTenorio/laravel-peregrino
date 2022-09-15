@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create ('historia_clinica', function (Blueprint $table){
             $table->increments('idHistoriaClinica');
-            $table->integer('id_paciente')->nullable()->unsigned();
+            $table->integer('idPaciente')->nullable()->unsigned();
             $table->string('id_register')->nullable();
 
-            $table->foreign('id_paciente')->references('idPaciente')->on('paciente');
+            $table->foreign('idPaciente')->references('idPaciente')->on('paciente');
             $table->timestamps();
         });
     }

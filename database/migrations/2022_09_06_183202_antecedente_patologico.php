@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('antecedente_patologico', function (Blueprint $table){
             $table->increments('idAntecedentePatologico');
-            $table->boolean('antecedente_patologico_hospitalizacion');
-            $table->boolean('antecedente_patologico_quirugicas');
-            $table->boolean('antecedente_patologico_trumatismo');
-            $table->boolean('antecedente_patologico_trasnfusion');
-            $table->boolean('antecedente_patologico_consumo_de_sustancia_psicoactiva');
-            $table->boolean('antecedente_patologico_alergias');
+            $table->string('antecedente_patologico_hospitalizacion');
+            $table->string('antecedente_patologico_quirugicas');
+            $table->string('antecedente_patologico_trumatismo');
+            $table->string('antecedente_patologico_trasnfusion');
+            $table->string('antecedente_patologico_consumo_de_sustancia_psicoactiva');
+            $table->string('antecedente_patologico_alergias');
             $table->integer('idHistoriaClinica')->unsigned();
             $table->timestamps();
 

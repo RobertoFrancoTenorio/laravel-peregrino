@@ -10,6 +10,9 @@ class ActividadFisica extends Model
     use HasFactory;
 
     protected $fillable = [
-        'idActividadFisica', 'frecuencia', 'nombreActividad', 'id_antecedente_no_patologico', 'estatusActividadFisica'
+        'idActividadFisica', 'actividad_frecuencia', 'actividad_nombre', 'id_antecedente_no_patologico', 'estatusActividadFisica', 'idAntecedenteNoPatologico'
     ];
+
+    protected $table = "actividad_fisica";
+
 }

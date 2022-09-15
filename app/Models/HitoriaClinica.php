@@ -10,10 +10,10 @@ class HitoriaClinica extends Model
     use HasFactory;
 
     protected $fillable = [
-        'idHistoriaClinica', 'id_paciente', 'id_register',
+        'idHistoriaClinica', 'idPaciente', 'id_register',
         'created_at', 'updated_at',
     ];
 
-    protected $table = "historiaclinica";
+    protected $table = "historia_clinica";
     protected $primaryKey = 'idHistoriaClinica';
 }
