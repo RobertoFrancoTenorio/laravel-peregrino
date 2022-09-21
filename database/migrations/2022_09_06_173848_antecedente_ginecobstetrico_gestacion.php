@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('idGestacion');
             $table->integer('gestacion_cantidad');
             $table->date('gestacion_ultima_fecha');
-            $table->text('gestacion_observacion');
+            $table->text('gestacion_observacion')->nullable();
             $table->integer('idAntecedenteGinecobstetrico')->unsigned();
             $table->timestamps();
 

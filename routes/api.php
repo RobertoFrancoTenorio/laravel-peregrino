@@ -61,6 +61,28 @@ use App\Http\Controllers\Hospitalizacion_Controller;
     Route::post('/postAntecedenteProstatico', [HitoriaClinica_Controller::class, 'store_Prostatico']);
 
     Route::post('/postExamenProstata', [HitoriaClinica_Controller::class, 'store_Antecedente_Examen_Prostata']);
+
+    Route::post('/postAntecedenteGinecobstetrico', [HitoriaClinica_Controller::class, 'store_Antecedente_Ginecobstetrico']);
+
+    Route::post('/postAntecedenteGinecobstetricoMenstruacion', [HitoriaClinica_Controller::class, 'store_Menstruacion']);
+
+    Route::post('/postAntecedenteGinecobstetricoGestacion', [HitoriaClinica_Controller::class, 'store_Gestacion']);
+
+    Route::post('/postAntecedenteGinecobstetricoParto', [HitoriaClinica_Controller::class, 'store_Parto']);
+
+    Route::post('/postAntecedenteGinecobstetricoAborto', [HitoriaClinica_Controller::class, 'store_Aborto']);
+
+    Route::post('/postAntecedenteGinecobstetricoCesarea', [HitoriaClinica_Controller::class, 'store_Cesarea']);
+
+    Route::post('/postAntecedenteGinecobstetricoTamisDeMama', [HitoriaClinica_Controller::class, 'store_TamisDeMama']);
+
+    Route::post('/postAntecedenteGinecobstetricoPapanicolau', [HitoriaClinica_Controller::class, 'store_Papanicolau']);
+
+    Route::get('/getHistoriaClinica/{id}', [HitoriaClinica_Controller::class, 'getHistoriaClinica']);
+
+    Route::get('/getHistoriaClinica_Antecedente_Patologico/{id}', [HitoriaClinica_Controller::class, 'getHistoriaClinica_Antecedente_Patologico']);
+
+
 #endregion
 
 #region Patologico
@@ -78,19 +100,23 @@ use App\Http\Controllers\Hospitalizacion_Controller;
 
     Route::post('/postPadecimiento', [AntecedentePatologico_Controller::class, 'store_padecimiento']);
 
+    Route::post('/postPadecimientoHeredoFamiliar', [AntecedentePatologico_Controller::class, 'store_padecimiento_heredofamiliar']);
+
     Route::post('/postDetalleMedicamento', [AntecedentePatologico_Controller::class, 'store_DetalleMedicamento']);
 
     Route::post('/postMedicamento', [AntecedentePatologico_Controller::class, 'store_Medicamento']);
+
+    Route::get('/getPadecimientos/{id}', [AntecedentePatologico_Controller::class, 'getPadecimientos']);
+
+    Route::get('/getPadecimientos_HF/{id}', [AntecedentePatologico_Controller::class, 'getPadecimientos_HF']);
 
 #endregion
 
 #region No Patologico
     Route::post('/postNoPatologico', [AntecedenteNoPatologico_Controller::class, 'store']);
-#endregion
 
-#region Antecedente Ginecobstetrico
-    Route::post('/postAntecedenteGinecobstetrico', [AntecedenteGinecobstetrico_Controller::class, 'store']);
-#region
+    Route::get('/getAntecedenteNoPatologico/{id}', [AntecedenteNoPatologico_Controller::class, 'getAntecedenteNoPatologico']);
+#endregion
 
 #region Actividad Fisica
     Route::post('/postActividadFisica', [ActividadFisica_Controller::class, 'store']);

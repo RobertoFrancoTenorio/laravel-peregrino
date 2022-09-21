@@ -14,6 +14,7 @@ use App\Models\SustanciaPsicoactiva;
 use App\Models\padecimiento;
 use App\Models\DetalleMedicamento;
 use App\Models\Medicamento;
+use App\Models\PadecimientoHF;
 
 class AntecedentePatologico_Controller extends Controller
 {
@@ -181,6 +182,25 @@ class AntecedentePatologico_Controller extends Controller
         $padecimiento = new padecimiento();
         $padecimiento->padecimiento = $request->padecimiento;
         $padecimiento->padecimiento_estatus = $request->padecimiento_estatus;
+        $padecimiento->idAntecedentePatologico = $request->idAntecedentePatologico;
+        $padecimiento->created_at = Carbon::now('America/Mexico_City');
+        $padecimiento->updated_at = $request->updated_at;
+        $padecimiento->save();
+        return $padecimiento;
+    }
+
+    public function getPadecimientos($id){
+        return DB::table('padecimiento')->where('idAntecedentePatologico', $id)->get();
+    }
+
+    public function getPadecimientos_HF($id){
+        return DB::table('padecimiento_hf')->where('idAntecedentePatologico', $id)->get();
+    }
+
+    public function store_padecimiento_heredofamiliar(Request $request){
+        $padecimiento = new PadecimientoHF();
+        $padecimiento->padecimiento_hf_parentesco = $request->padecimiento_hf_parentesco;
+        $padecimiento->padecimiento = $request->padecimiento;
         $padecimiento->idAntecedentePatologico = $request->idAntecedentePatologico;
         $padecimiento->created_at = Carbon::now('America/Mexico_City');
         $padecimiento->updated_at = $request->updated_at;

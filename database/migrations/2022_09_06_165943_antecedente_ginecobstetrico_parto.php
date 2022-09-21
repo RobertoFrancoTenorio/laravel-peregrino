@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('parto', function (Blueprint $table){
             $table->increments('idParto');
             $table->date('parto_ultima_fecha');
-            $table->integer('partos_cantidad');
+            $table->integer('parto_cantidad');
             $table->text('parto_observacion');
             $table->integer('idAntecedenteGinecobstetrico')->unsigned();
             $table->timestamps();

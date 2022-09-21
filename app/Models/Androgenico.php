@@ -18,7 +18,7 @@ class Androgenico extends Model
         'androgenico_ets',
         'androgenico_metodo_anticonceptivo_hormonal',
         'androgenico_pac_metodo_anticonceptivo_hormonal_diu',
-        'idAntecedentePatologico'
+        'idHistoriaClinica'
     ];
 
     protected $table = 'androgenico';

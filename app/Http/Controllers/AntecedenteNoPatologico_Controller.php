@@ -60,6 +60,6 @@ class AntecedenteNoPatologico_Controller extends Controller
     }
 
     public function getAntecedenteNoPatologico($id){
-        return DB::table('antecedente_no_patologico')->where('idAntecedenteNoPatologico', $id)->get();
+        return DB::table('antecedente_no_patologico')->where('idHistoriaClinica', $id)->get();
     }
 }

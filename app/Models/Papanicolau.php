@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PadecimientoHF extends Model
+class Papanicolau extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'padecimiento_hf_parentesco', 'padecimiento', 'padecimiento_estatus', 'idAntecedentePatologico'
+        'idPapanicolau', 'papanicolau_fecha', 'papanicolau_observacion', 'idAntecedenteGinecobstetrico'
     ];
 
-    protected $table = 'padecimiento_hf';
+    protected $table = 'papanicolau';
 }

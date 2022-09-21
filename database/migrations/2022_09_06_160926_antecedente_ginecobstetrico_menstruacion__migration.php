@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('menstruacion_cantidad');
             $table->string('menstruacion_duracion');
             $table->string('menstruacion_presencia_De_Dolor');
-            $table->date('menstruacion_fecha_Ultima_Menstruacion');
+            $table->date('menstruacion_fecha_Ultima');
+            $table->text('menstruacion_otras_secreciones');
             $table->integer('idAntecedenteGinecobstetrico')->unsigned();
             $table->timestamps();
 

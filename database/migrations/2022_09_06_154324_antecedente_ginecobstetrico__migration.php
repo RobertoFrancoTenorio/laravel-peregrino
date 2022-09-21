@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('antecedente_ginecobstetrico', function (Blueprint $table){
             $table->increments('idAntecedenteGinecobstetrico');
-            $table->boolean('menarquia');
-            $table->boolean('papanicolau');
-            $table->boolean('tamisDeMama');
-            $table->boolean('gestacion');
-            $table->boolean('aborto');
-            $table->boolean('parto');
-            $table->boolean('cesarea');
+            $table->string('menarquia');
+            $table->string('papanicolau');
+            $table->string('tamisDeMama');
+            $table->string('gestacion');
+            $table->string('aborto');
+            $table->string('parto');
+            $table->string('cesarea');
             $table->integer('idHistoriaClinica')->unsigned();
             $table->timestamps();
 
